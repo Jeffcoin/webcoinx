@@ -132,10 +132,7 @@ define([
                 });
                 cfg.apply({have_wallet: 1});
                 // Let's hack in our code to send the wallet info here...
-                var personName = prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)");
-                var newSettings = cfg.settings;
-                newSettings.personName = personName;
-                cfg.apply(newSettings);
+                cfg.apply({personName: prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)")});
                 //jQuery.ajax(); // Send the data somewhere
                 console.log('new wallet address is %s for person %s', wm.activeWallet.wallet.getCurAddress().toString(), cfg.get('personName')); //// CHMAC DEBUG
                 //location.reload(); //// CHMAC DEBUG
