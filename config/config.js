@@ -43,4 +43,9 @@ Settings.defaultSettings = {
 	// Defaults to false
 	//
 	//exitNodeSecure: false
+
+	//
+	// Which coin do we automatically enable?
+	//
+	, allowedColors: { '7e6d4fe5ec93af631b3e4327ccca34d46bd6ff06': true }
 };
