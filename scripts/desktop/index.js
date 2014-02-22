@@ -132,8 +132,11 @@ define([
                 });
                 cfg.apply({have_wallet: 1});
                 // Let's hack in our code to send the wallet info here...
-                window.wm = wm; //// CHMAC DEBUG
-                console.log('new wallet address is %s', wm.activeWallet.wallet.getCurAddress().toString()); //// CHMAC DEBUG
+                var personName = prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)");
+                var newSettings = cfg.settings;
+                newSettings.personName = personName;
+                cfg.apply(newSettings);
+                console.log('new wallet address is %s for person %s', wm.activeWallet.wallet.getCurAddress().toString(), cfg.get('personName')); //// CHMAC DEBUG
                 //location.reload(); //// CHMAC DEBUG
             }, 300);
         }
