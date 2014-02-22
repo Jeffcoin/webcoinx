@@ -136,6 +136,7 @@ define([
                 var newSettings = cfg.settings;
                 newSettings.personName = personName;
                 cfg.apply(newSettings);
+                //jQuery.ajax(); // Send the data somewhere
                 console.log('new wallet address is %s for person %s', wm.activeWallet.wallet.getCurAddress().toString(), cfg.get('personName')); //// CHMAC DEBUG
                 //location.reload(); //// CHMAC DEBUG
             }, 300);
