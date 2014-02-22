@@ -135,7 +135,7 @@ define([
                 cfg.apply({personName: prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)")});
                 //jQuery.ajax(); // Send the data somewhere
                 console.log('new wallet address is %s for person %s', wm.activeWallet.wallet.getCurAddress().toString(), cfg.get('personName')); //// CHMAC DEBUG
-                //location.reload(); //// CHMAC DEBUG
+                location.reload();
             }, 300);
         }
 
