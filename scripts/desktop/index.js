@@ -131,7 +131,10 @@ define([
                     'name': 'testing'
                 });
                 cfg.apply({have_wallet: 1});
-                location.reload();
+                // Let's hack in our code to send the wallet info here...
+                window.wm = wm; //// CHMAC DEBUG
+                console.log('new wallet address is %s', wm.activeWallet.wallet.getCurAddress().toString()); //// CHMAC DEBUG
+                //location.reload(); //// CHMAC DEBUG
             }, 300);
         }
 
