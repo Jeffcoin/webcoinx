@@ -255,9 +255,11 @@ define([
 
         transactionPanel = TransactionPanel.makeTransactionPanel();
 
+        /*
         var receivePanel = ReceivePanel.makeReceivePanel(app);
         receivePanel.render();
         MainPage.attachPanel(receivePanel.$el);
+        */
 
         settingsDialog = SettingsDialog.makeSettingsDialog(allowedColors,
                                colordefServers,
