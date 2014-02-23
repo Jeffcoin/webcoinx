@@ -29,6 +29,14 @@ define([
                 sendDialog.find('.address').val('');
                 sendDialog.find('.messages').empty();
             };
+	
+	// Add the recipients from config to the select
+	console.log('Starting to add options to select now'); //// CHMAC DEBUG
+	var sendAddress = sendDialog.find('.address');
+	$.each(cfg.get('voteRecipients'), function(key, val){
+	    sendAddress.append($('<option></option>').attr('value', key).text(val));
+	});
+	
 
 //        $('#nav_send_money').click(function (e) {
 //            e.preventDefault();
