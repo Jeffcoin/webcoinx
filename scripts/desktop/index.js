@@ -258,7 +258,7 @@ define([
         var html = '<tr>';
         html += '<th>Team</th>';
         html += '<th>Address</th>';
-        html += '<th>Balance</th>';
+        html += '<th>Jeffcoins</th>';
         html += '</tr>';
         var address;
         var name;
