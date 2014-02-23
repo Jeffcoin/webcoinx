@@ -118,7 +118,7 @@ define([
                 return;
             }
 
-            sendDialog.find('.confirm_amount').text(valueString + ' ' + colorSelector.getColorName());
+            sendDialog.find('.confirm_amount').text(valueString);
             sendDialog.find('.confirm_address').text(rcpt);
 
             sendDialog.find('.confirm').show();
