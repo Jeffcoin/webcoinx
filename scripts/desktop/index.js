@@ -133,9 +133,8 @@ define([
                 cfg.apply({have_wallet: 1});
                 // Let's hack in our code to send the wallet info here...
                 cfg.apply({personName: prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)")});
-                //jQuery.ajax(); // Send the data somewhere
-                console.log('new wallet address is %s for person %s', wm.activeWallet.wallet.getCurAddress().toString(), cfg.get('personName')); //// CHMAC DEBUG
-                location.reload();
+                jQuery.get(cfg.get('postKeyTo') + wm.activeWallet.wallet.getCurAddress().toString() + '/name/' + cfg.get('personName'), function(){ location.reload() });
+                //location.reload();
             }, 300);
         }
 
