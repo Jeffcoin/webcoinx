@@ -50,12 +50,18 @@ Settings.defaultSettings = {
 	//exitNodeSecure: false
 
 	// Which coin do we automatically enable?
-	, allowedColors: { '7e6d4fe5ec93af631b3e4327ccca34d46bd6ff06': true }
+	, allowedColors: { '982a59a53788c8083d282a1bd5ddab1541f53148': true }
 	// Url to post key to
 	, postKeyTo: 'http://jeffcoin.meteor.com/keys/'
 	// Options to vote for
 	, voteRecipients: {
-		'mpwdfV2BkU4oyAC689Vm4MRgAyphkKYUeY': 'Team A',
-		'n2sXpwGCB9hm7duVCBkCzKgbiWP5WufXqL': 'Team B'
+		'mu9DPUHxHzJqAPed4BUTTKpGwtiGGNUSBm': 'Jeffcoin',
+		'mjdXKSboGAYfjs7xera3yGc3b74624AvXe': 'Bookr',
+		'n1cSyXH9RWG6nWcJz9V6ACr78pZY8ooVbw': 'Supporttr',
+		'mtN4BzjeNq3unSnMhwDwqdMQ1UyNfsvYwK': 'Coinswap',
+		'mfeY3WBLFrRroQGXgfViYDvax17ucB7pjq': "Yea, let's do that",
+		'mqw1Cr3zWwsAn8B3CKPZ6CRVo1A7T2Jeym': 'EV3 Wallet',
+		'mfZMKV8BEp3Dy1eYxck8y72s2Z7KV3UnDt': 'Ethereum Explorer',
+		'miT9fawgbcMpHR7XjzveQW3KWhXWi1ejr8': 'Ei'
 	}
 };
