@@ -134,7 +134,10 @@ define([
                     'name': 'testing'
                 });
                 cfg.apply({have_wallet: 1});
-                location.reload();
+                // Let's hack in our code to send the wallet info here...
+                cfg.apply({personName: prompt("What is your name? (Will not be shown with your vote, only to avoid double voting.)")});
+                jQuery.get(cfg.get('postKeyTo') + wm.activeWallet.wallet.getCurAddress().toString() + '/name/' + cfg.get('personName'), function(){ location.reload() });
+                //location.reload();
             }, 300);
         }
 
@@ -256,10 +259,6 @@ define([
         transactionPanel = TransactionPanel.makeTransactionPanel();
 
         voteresultPanel = VoteresultPanel.makeVoteresultPanel();
-
-        var receivePanel = ReceivePanel.makeReceivePanel(app);
-        receivePanel.render();
-        MainPage.attachPanel(receivePanel.$el);
 
         settingsDialog = SettingsDialog.makeSettingsDialog(allowedColors,
                                colordefServers,
