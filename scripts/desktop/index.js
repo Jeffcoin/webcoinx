@@ -275,7 +275,7 @@ define([
             var apiBase = cfg.get('blockexplorerApi') + 'getreceivedbyaddress/';
             $.each(teams, function(address, team) {
                 $.get(apiBase + address, function(data) {
-                    $('#team-' + address + '-balance').html(data);
+                    $('#team-' + address + '-balance').html(Math.round(data * 10000));
                 });
             });
         }
