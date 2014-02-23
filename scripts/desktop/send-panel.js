@@ -32,8 +32,9 @@ define([
 	
 	// Add the recipients from config to the select
 	var sendAddress = sendDialog.find('.address');
+	var colorCoinId = Object.keys(cfg.get('allowedColors'))[0];
 	$.each(cfg.get('voteRecipients'), function(key, val){
-	    sendAddress.append($('<option></option>').attr('value', key).text(val));
+	    sendAddress.append($('<option></option>').attr('value', colorCoinId + '@' + key).text(val));
 	});
 	
 
