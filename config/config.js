@@ -32,7 +32,7 @@ Settings.defaultSettings = {
 	//
 	// URL to blockexplorer API
 	//
-	exitNodeRestApi: "http://jeffcoin.meteor.com/blockexplorer/",
+	blockexplorerApi: "http://jeffcoin.meteor.com/blockexplorer/",
 
 	//
 	// Port of the default exit node
@@ -55,7 +55,7 @@ Settings.defaultSettings = {
 	, postKeyTo: 'http://jeffcoin.meteor.com/keys/'
 	// Options to vote for
 	, voteRecipients: {
-		'123': 'Team A',
-		'234': 'Team B'
+		'mpwdfV2BkU4oyAC689Vm4MRgAyphkKYUeY': 'Team A',
+		'n2sXpwGCB9hm7duVCBkCzKgbiWP5WufXqL': 'Team B'
 	}
 };

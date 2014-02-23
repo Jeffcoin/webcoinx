@@ -22,7 +22,7 @@ define([
     "desktop/settings-dialog",
     "desktop/main-page",
     "../wallets/miniwallet",
-    "desktop/voteresult-panel",
+    "desktop/voteresult-panel"
 ], function ($,
              WalletManager,
              ExitNode,
@@ -258,7 +258,34 @@ define([
 
         transactionPanel = TransactionPanel.makeTransactionPanel();
 
-        voteresultPanel = VoteresultPanel.makeVoteresultPanel();
+        // Hacking the result list in - no view, no model - yay!
+        var teams = cfg.get('voteRecipients');
+        var html = '<tr>';
+        html += '<th>Team</th>';
+        html += '<th>Address</th>';
+        html += '<th>Balance</th>';
+        html += '</tr>';
+        var address;
+        var name;
+        for (address in teams) {
+            html += '<tr>';
+            html += '<td>' + teams[address] + '</td>';
+            html += '<td>' + address + '</td>';
+            html += '<td id="team-' + address + '-balance"></td>';
+            html += '</tr>';
+        }
+        $('#teams_list').html(html);
+        
+        function updateBalances() {
+            var apiBase = cfg.get('blockexplorerApi') + 'getreceivedbyaddress/';
+            $.each(teams, function(address, team) {
+                $.get(apiBase + address, function(data) {
+                    $('#team-' + address + '-balance').html(data);
+                });
+            });
+        }
+        updateBalances();
+        setInterval(updateBalances, 20000);
 
         settingsDialog = SettingsDialog.makeSettingsDialog(allowedColors,
                                colordefServers,
