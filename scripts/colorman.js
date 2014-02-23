@@ -348,7 +348,7 @@ define(["jquery"], function ($) {
 
     ColorMan.prototype.formatValueU = function(value, color) {
 		color = color?color:false;
-		return this.formatValue(value, color) + ' ' + id2name(color);
+		return this.formatValue(value, color);
     };
   
     ColorMan.prototype.is_issue = function(txhash) {

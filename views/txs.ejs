@@ -5,12 +5,11 @@
 	  <th>Date</th>
 	  <% if (wallet) { %>
 	  <th>Description</th>
-		  <th>Debit</th>
-		  <th>Credit</th>
+		  <th>Sent</th>
+		  <th>Received</th>
 	  <% } else { %>
 		  <th>Value</th>
 	  <% } %>
-          <th>Fees</th>
 	  <th></th>
 	</tr>
   </thead>
@@ -35,13 +34,12 @@
 		  <td><%=cm.formatValueU(tx.getTotalValue(), tx.color.colorid)%></td>
 	  <% } %>
                   <td>
-<%=cm.formatValueU(impact.fees)%>
 		  <td class="detail"><img src="images/detail.png" alt=""></td>
 		</tr>
 	<% } %>
 	<% if (!txs.length) { %>
 		<tr>
-		  <td colspan="<%=wallet ? "8" : "7"%>">No transactions</td>
+		  <td colspan="<%=wallet ? "8" : "7"%>"></td>
 		</tr>
 	<% } %>
   </tbody>
