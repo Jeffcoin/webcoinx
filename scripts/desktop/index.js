@@ -248,11 +248,6 @@ define([
             colorSelector.setColors(d);
         });
 
-        issuePanel = IssuePanel.makeIssuePanel(app, cfg, wm, colorMan,
-                                              colordefServers,
-                                              allowedColors,
-                                              exitNode, reload_colors);
-
         sendPanel = SendPanel.makeSendPanel(app, cfg, wm, colorMan,
                                             exitNode, colorSelector);
 

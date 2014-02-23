@@ -36,7 +36,9 @@ define([
             setColors = function (d) {
                 var sel = $('.color-selector');
                 sel.empty();
+                /*
                 sel.append('<option value="">BTC</option>');
+                */
 
                 function isgood(c) { return (allowedColors[c] === true); }
 
@@ -71,6 +73,11 @@ define([
                                .text(this.name));
                 });
                 cms.multiselect('refresh');
+                // Ensure this option is "live"
+                var $option = sel.find("option:selected");
+                color = $option.val();
+                colorName = $option.text();
+                $(api).trigger(CHANGE_EVENT);
             };
         init();
         api = {
