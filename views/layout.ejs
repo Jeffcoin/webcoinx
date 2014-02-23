@@ -11,64 +11,10 @@
 
     <div id="tabs">
       <ul>
-        <li><a href="#panel-overview">Overview</a></li>
         <li><a href="#panel-vote">Vote</a></li>
         <li><a href="#panel-voteresults">Vote Results</a></li>
         <li><a href="#panel-transactions" id="tab-transactions">Vote History</a></li>
       </ul>
-
-      <div class="block" id="panel-overview">
-        <div class="block_head">
-          <div class="bheadl"></div>
-          <div class="bheadr"></div>
-          <h2>Wallet</h2>
-
-          <ul>
-            <li><a href="#" id="wallet_active_recreate">Create</a></li>
-          </ul>
-        </div><!-- END .block_head -->
-        <div class="block_content">
-          <div id="wallet_init">
-            <p>You currently have no wallet. Use the button in the top right to create one.</p>
-            <p id="wallet_init_status"></p>
-          </div>
-          <div id="wallet_active" style="display: none">
-            <div id="testnet_wallet" style="display: none">
-              <p><strong>Note:</strong> this voting system works <strong style='color:red'>in testnet mode. It is for testing only</strong>, coins are not permanent.</p>
-            </div>
-            <form>
-              <p>
-                <label for="color-selector-overview">Asset/currency: </label>
-                <select id="color-selector-overview" class="color-selector"><option value="">BTC</option></select>
-                <button onclick="window.location.reload(true); return false;">Reload / sync</button>
-              </p>
-              <p><strong>Note:</strong> you can add more assets to this list on 'Receive' tab. Or you can issue your own assets.</p>
-              <p>
-                <label for="addr">Your <span class='colorind'>?</span> Address:</label>
-                <input id="addr" class="text medium" readonly="readonly"/>
-                <button class="new_addr">New&hellip;</button>
-              </p>
-              <p>
-                <label style="vertical-align: bottom">Your Balance:</label>
-                <span class="balance">
-                  <img src="images/ajax-loader.gif" class="updating-balance">
-                  <span class="value">Connecting...</span>
-                  <span class="unit"></span>
-                </span>
-              </p>
-              <!--
-              <p>
-              <button id="nav_send_money">Send coins</button>
-              <button id="nav_issue_money">Issue coins</button>
-              <button id="nav_p2ptrade">p2ptrade</button>
-              </p>
-              -->
-            </form>
-          </div>
-        </div><!-- END .block_content -->
-        <div class="bendl"></div>
-        <div class="bendr"></div>
-      </div><!-- END .block -->        
 
       <div class="block" id="panel-transactions">
         <div class="" id="main_tx_list">
