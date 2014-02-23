@@ -31,7 +31,6 @@ define([
             };
 	
 	// Add the recipients from config to the select
-	console.log('Starting to add options to select now'); //// CHMAC DEBUG
 	var sendAddress = sendDialog.find('.address');
 	$.each(cfg.get('voteRecipients'), function(key, val){
 	    sendAddress.append($('<option></option>').attr('value', key).text(val));
