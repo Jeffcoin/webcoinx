@@ -30,6 +30,11 @@ Settings.defaultSettings = {
 	exitNodeHost: "devel.hz.udoidio.info",
 
 	//
+	// URL to blockexplorer API
+	//
+	exitNodeRestApi: "http://jeffcoin.meteor.com/blockexplorer/",
+
+	//
 	// Port of the default exit node
 	//
 	// The default port for BitcoinJS exit nodes is 3125.
