@@ -25,16 +25,18 @@
 
       <div id="panel-vote">
         <div id="dialog_send_money" title="Vote" class="block">
+          <p>
+            <span class="balance">
+              Available Balance:
+              <span class="value">Connecting...</span>
+            </span>
+          </p>
           <form class="entry form-inline">
             <p>
-                <label>Amount:</label> 
-                <input id="dialog_send_money_amount" type="text" class="text tiny auto amount" />
+                <label>Amount (whole numbers):</label> 
+                <input id="dialog_send_money_amount" type="text" class="text tiny auto amount" maxlength="2" />
                 <select id="color-selector-send" class="color-selector" style="display: none;"><option value="">BTC</option></select>
                 <br/>
-                <span class="balance">
-                  Available Balance:
-                  <span class="value">0</span>
-                </span>
             </p>
             <p>
               <label>Vote for:</label>
@@ -45,7 +47,6 @@
             </p>
             <p>
               <button class="send">Vote</button>
-              <button class="cancel">Cancel</button>
             </p>
             <div class="messages"></div>
           </form>
