@@ -13,10 +13,13 @@ define([
     "../colorman",
     "../p2ptrade/gui",
     "desktop/color-selector",
+    "desktop/issue-panel",
     "desktop/overview-panel",
+    "desktop/receive-panel",
     "desktop/send-panel",
     "desktop/testnet-handler",
     "desktop/transaction-panel",
+    "desktop/settings-dialog",
     "desktop/main-page",
     "../wallets/miniwallet",
     "desktop/voteresult-panel",
@@ -28,10 +31,13 @@ define([
              ColorMan,
              P2pgui,
              ColorSelector,
+             IssuePanel,
              OverviewPanel,
+             ReceivePanel,
              SendPanel,
              TestnetHandler,
              TransactionPanel,
+             SettingsDialog,
              MainPage,
              MiniWallet,
              VoteresultPanel) {
@@ -248,6 +254,12 @@ define([
         transactionPanel = TransactionPanel.makeTransactionPanel();
 
         voteresultPanel = VoteresultPanel.makeVoteresultPanel();
+
+        settingsDialog = SettingsDialog.makeSettingsDialog(allowedColors,
+                               colordefServers,
+                               cfg,
+                               autoNumericBtc,
+                               reload_colors);
 
         $(MainPage).bind(MainPage.events.SETTINGS_CLICK, function () {
             settingsDialog.openDialog();
