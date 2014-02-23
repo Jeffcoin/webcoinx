@@ -21,7 +21,8 @@ define([
     "desktop/transaction-panel",
     "desktop/settings-dialog",
     "desktop/main-page",
-    "../wallets/miniwallet"
+    "../wallets/miniwallet",
+    "desktop/voteresult-panel",
 ], function ($,
              WalletManager,
              ExitNode,
@@ -38,12 +39,14 @@ define([
              TransactionPanel,
              SettingsDialog,
              MainPage,
-             MiniWallet) {
+             MiniWallet,
+             VoteresultPanel) {
     'use strict';
     var colorSelector,
         issuePanel,
         sendPanel,
         transactionPanel,
+        voteresultPanel,
         settingsDialog;
 
     $(function () {
@@ -251,6 +254,8 @@ define([
                                             exitNode, colorSelector);
 
         transactionPanel = TransactionPanel.makeTransactionPanel();
+
+        voteresultPanel = VoteresultPanel.makeVoteresultPanel();
 
         var receivePanel = ReceivePanel.makeReceivePanel(app);
         receivePanel.render();
